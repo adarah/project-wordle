@@ -15,6 +15,7 @@ function GuessInput({ onGuess }) {
       <input
         id="guess-input"
         type="text"
+        required
         value={guess}
         onChange={(e) => setGuess(e.target.value.toUpperCase())}
         minLength={5}
