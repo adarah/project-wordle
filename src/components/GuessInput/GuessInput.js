@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { checkGuess } from "../../game-helpers";
 
-function GuessInput() {
+function GuessInput({ onGuess }) {
   const [guess, setGuess] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    checkGuess(guess, "hello");
-    console.info({ guess });
+    onGuess(guess);
     setGuess("");
   }
 
